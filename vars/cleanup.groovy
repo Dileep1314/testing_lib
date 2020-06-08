@@ -1,11 +1,4 @@
+#!/usr/bin/env groovy
+//variables for npm_registry,nexus_url_imagine is added in global variables.
 def call(body) {
-  def config = [:]
-  body.resolveStrategy = Closure.DELEGATE_FIRST
-  body.delegate = config
-  body()
-
-  def sayHello = load 'vars/sayHello.groovy'
-  sayHello.hello("World!")
-}
-}
- 
+    echo "Running npm clean"
