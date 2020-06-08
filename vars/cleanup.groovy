@@ -2,3 +2,5 @@
 //variables for npm_registry,nexus_url_imagine is added in global variables.
 def call(body) {
     echo "Running npm clean"
+ return this
+}
