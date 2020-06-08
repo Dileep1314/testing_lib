@@ -1,4 +1,6 @@
 def call(body) {
-rmdir()
+sh '''
+   echo "testing"
+   '''
 return this
 }
