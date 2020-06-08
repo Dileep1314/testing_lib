@@ -1,4 +1,4 @@
 def call(body) {
-deletedir()
+rmdir()
 return this
 }
