@@ -1,6 +1,8 @@
 #!/usr/bin/env groovy
-import hudson.model.*
-
-node('master') {
-    sh("your shell script")   
+//variables for npm_registry,nexus_url_imagine is added in global variables.
+def call(body) {
+    sh '''
+    echo "Running npm clean"
+       '''
+ return this
 }
