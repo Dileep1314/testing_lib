@@ -1,6 +1,11 @@
-import hudson.model.*
+def call(body) {
+  def config = [:]
+  body.resolveStrategy = Closure.DELEGATE_FIRST
+  body.delegate = config
+  body()
 
-node('master') {
-    sh("your shell script")   
+  def sayHello = load 'vars/sayHello.groovy'
+  sayHello.hello("World!")
+}
 }
  
